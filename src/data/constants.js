@@ -7,7 +7,7 @@ export const Bio = {
     "I am a dedicated junior IT professional with a recent degree in Information Technology. I am eager to begin my career and make meaningful contributions to the tech industry.",
   github: "https://github.com/danlocar25",
   resume:
-    "https://drive.google.com/file/d/1UlgNSRqAuxECzlxioN0vd7mPzskgeJ-D/view?usp=sharing",
+    "https://drive.google.com/file/d/17ihkV3KSkCuTPD4zxbz-hJZjw-Q78nAo/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/dan-carlo-magpantay/",
   insta: "https://www.instagram.com/dan.olrac/",
   email: "dancarlom03@gmail.com",
@@ -16,16 +16,21 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Frontend",
+    title: "Programming Languages",
     skills: [
       {
-        name: "HTML",
-        image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+        name: "Java",
+        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
       },
       {
-        name: "CSS",
+        name: "Python",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png",
+      },
+      {
+        name: "C#",
+        image:
+          "https://cdn.icon-icons.com/icons2/2415/PNG/512/csharp_plain_logo_icon_146577.png",
       },
       {
         name: "JavaScript",
@@ -33,65 +38,62 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
-        name: "React",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+        name: "PHP",
+        image: "https://images.vexels.com/media/users/3/166470/isolated/preview/73835fa38fba6d35aff9de603dc5044a-php-programming-language-icon.png",
       },
+    ],
+  },
+  {
+    
+    title: "Frameworks and Libraries",
+    skills: [
       {
         name: "Bootstrap",
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
       },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
       {
-        name: "PHP",
-        image: "https://images.vexels.com/media/users/3/166470/isolated/preview/73835fa38fba6d35aff9de603dc5044a-php-programming-language-icon.png",
+        name: "React",
+        image:
+          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+      },
+      {
+        name: "jQuery",
+        image:
+          "https://static-00.iconduck.com/assets.00/jquery-icon-1024x1024-rar4nqfl.png",
       },
       {
         name: "ASP.Net Core",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png",
       },
       {
-        name: "Node JS",
-        image: "https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png?f=webp",
+        name: "Django",
+        image:
+          "https://seeklogo.com/images/D/django-logo-4C5ECF7036-seeklogo.com.png",
       },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [
       {
         name: "MySQL",
         image:
           "https://upload.wikimedia.org/wikipedia/de/d/dd/MySQL_logo.svg",
       },
       {
+        name: "PostgreSQL",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png",
+      },
+      {
         name: "Firebase",
         image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
       },
-    ],
-  },
-  {
-    title: "Mobile Development",
-    skills: [
       {
-        name: "Java",
+        name: "Mongo DB",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-      },
-      {
-        name: "Kotlin",
-        image:
-          "https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg",
-      },
-      {
-        name: "React Native",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
-      },
-      {
-        name: "Android Studio",
-        image:
-          "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png",
+          "https://static-00.iconduck.com/assets.00/mongodb-original-icon-921x2048-hvrb89lu.png",
       },
     ],
   },
@@ -109,9 +111,19 @@ export const skills = [
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNcBgOnYCaXk6P1ARkFSMX0WWPXBHvhyEf8Nm2LFeIfA&s",
       },
       {
+        name: "GitLab",
+        image:
+          "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/144_Gitlab_logo_logos-512.png",
+      },
+      {
         name: "VS Code",
         image:
           "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.png",
+      },
+      {
+        name: "Android Studio",
+        image:
+          "https://cdn-icons-png.flaticon.com/256/5436/5436946.png",
       },
       {
         name: "Adobe XD",
@@ -272,7 +284,7 @@ export const education = [
     school: "Software Developer Intern",
     date: "April 2024 - August 2024",
     grade: "Python/Django, jQuery, PostgreSQL, RESTful API, Git/GitLab, Redmine",
-    desc: "The project we created for our internship was a web application designed to automate Hotfix processes, including the release notes for OpeniT's product/software.",
+    desc: "The project we created during our internship was a web application designed to automate hotfix processes, including generating release notes for Open iT's products and software.",
     degree: "Open iT • Internship",
   },  
 ];
