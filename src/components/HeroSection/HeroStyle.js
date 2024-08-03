@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 80px 30px;
+  padding: 10px 30px 80px;
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
@@ -94,9 +94,9 @@ export const HeroRightContainer = styled.div`
 
 export const Img = styled.img`
   position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
+  width: 400px;
+  height: 380px;
+  max-width: 380px;
   max-height: 400px;
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme.primary};
@@ -114,9 +114,9 @@ export const Img = styled.img`
 
 export const Title = styled.div`
   font-weight: 700;
-  font-size: 50px;
+  font-size: 45px;
   color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
+  line-height: 60px;
   @media (max-width: 960px) {
     text-align: center;
   }
@@ -130,18 +130,18 @@ export const Title = styled.div`
 
 export const TextLoop = styled.div`
   font-weight: 600;
-  font-size: 32px;
+  font-size: 25px;
   display: flex;
   gap: 12px;
   color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
+  line-height: 50px;
   @media (max-width: 960px) {
     text-align: center;
   }
   @media (max-width: 640px) {
-    font-size: 22px;
+    font-size: 15px;
     line-height: 48px;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
   }
 `;
 
@@ -153,7 +153,8 @@ export const Span = styled.span`
 export const SubTitle = styled.div`
   font-size: 20px;
   line-height: 32px;
-  margin-bottom: 42px;
+  text-align: justify;
+  margin-bottom: 10px;
   color: ${({ theme }) => theme.text_primary + 95};
 
   @media (max-width: 960px) {
@@ -166,15 +167,46 @@ export const SubTitle = styled.div`
   }
 `;
 
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+`;
+
+export const SocialMediaIcons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+  margin-bottom: 10px;
+`;
+
+export const SocialMediaIcon = styled.a`
+color: ${({ theme }) => theme.text_primary};
+  font-size: 24px; /* Adjust size as needed */
+  transition: color 0.3s ease;
+  text-decoration: none;
+
+  svg {
+    width: 39px; /* Adjust size as needed */
+    height: 39px; /* Adjust size as needed */
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.primary}; /* Change color on hover */
+  }
+`;
+
+
 export const ResumeButton = styled.a`
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
     text-decoration: none;
     width: 95%;
-    max-width: 300px;
+    max-width: 200px;
     text-align: center;
-    padding: 16px 0;
+    padding: 13px 0;
     color:${({ theme }) => theme.white};
     border-radius: 20px;
     cursor: pointer;

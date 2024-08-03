@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import Timeline from '@mui/lab/Timeline';
@@ -42,12 +41,15 @@ const Title = styled.div`
 font-size: 42px;
 text-align: center;
 font-weight: 600;
-margin-top: 20px;
+margin-top: 0px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
       margin-top: 12px;
       font-size: 32px;
   }
+  @media (max-width: 640px) {
+    margin-top: -25px;
+}
 `;
 
 const Desc = styled.div`
@@ -57,6 +59,12 @@ const Desc = styled.div`
     color: ${({ theme }) => theme.text_secondary};
     @media (max-width: 768px) {
         margin-top: 12px;
+        font-size: 16px;
+    }
+    @media (max-width: 640px) {
+        margin-top: 12px;
+        margin-right: 25px;
+        margin-left: 25px;
         font-size: 16px;
     }
 `;
@@ -70,36 +78,48 @@ const TimelineSection = styled.div`
     align-items: center;
     justify-content: center;
     gap: 12px;
-    @media (max-width: 660px) {
-        align-items: end;
+    @media (max-width: 640px) {
+        margin-right: 30px;
     }
 `;
-
-
 
 const index = () => {
     return (
         <Container id="education">
             <Wrapper>
-                <Title>Education</Title>
+                <Title>Work Experience</Title>
                 <Desc>
-                    My education has been a journey of self-discovery and growth. My educational details are as follows.
+                Discover my professional journey and contributions across internships and roles, showcasing my skills, expertise, and dedication to excellence.
                 </Desc>
                 <TimelineSection>
                     <Timeline>
-                        {education.map((education,index) => (
-                            <TimelineItem >
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <EducationCard education={education}/>
-                                </TimelineContent>
-                                <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length  && <TimelineConnector style={{ background: '#854CE6' }} />}
-                                </TimelineSeparator>
+                        {education.map((educationItem, index) => (
+                            <TimelineItem key={index}>
+                                {(index % 2 === 0) ? (
+                                     <>
+                                     <TimelineSeparator>
+                                         <TimelineDot variant="outlined" color="secondary" />
+                                         {index !== education.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                                     </TimelineSeparator>
+                                     <TimelineContent sx={{ py: '12px', px: 2 }}>
+                                         <EducationCard education={educationItem} />
+                                     </TimelineContent>
+                                     </>
+                                ) : (
+                                   
+                                    <>
+                                        <TimelineContent sx={{ py: '12px', px: 2 }}>
+                                            <EducationCard education={educationItem} />
+                                        </TimelineContent>
+                                        <TimelineSeparator>
+                                            <TimelineDot variant="outlined" color="secondary" />
+                                            {index !== education.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                                        </TimelineSeparator>
+                                    </>
+                                )}
                             </TimelineItem>
                         ))}
                     </Timeline>
-
                 </TimelineSection>
             </Wrapper>
         </Container>

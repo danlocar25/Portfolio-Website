@@ -26,8 +26,8 @@ export const NavbarContainer = styled.div`
   padding: 0 24px;
   max-width: 1200px;
 `;
-
 export const NavLogo = styled(LinkR)`
+    color: ${({ theme }) => theme.primary};
     width: 80%;    
     padding: 0 6px;
     display: flex;
@@ -39,9 +39,11 @@ export const NavLogo = styled(LinkR)`
   }
 `;
 export const Span = styled.div`
+    color: ${({ theme }) => theme.primary};
     padding: 0 4px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 48px;
+    margin-bottom: 5px;
 `;
 export const NavItems = styled.ul`
     width: 100%;
@@ -56,23 +58,31 @@ export const NavItems = styled.ul`
       display: none;
     }
 `;
-
 export const NavLink = styled.a`
-    color: ${({ theme }) => theme.text_primary};
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    :hover {
-      color: ${({ theme }) => theme.primary};
+color: ${({ theme }) => theme.text_primary};
+font-weight: 500;
+cursor: pointer;
+text-decoration: none;
+position: relative; /* Add this to ensure proper positioning of the underline */
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -2px; /* Adjust the position of the line */
+        left: 0;
+        width: 0;
+        height: 2px; /* Set the height of the line */
+        background-color: ${({ theme }) => theme.primary}; /* Set the color of the line */
+        transition: width 0.3s ease; /* Add transition for width change */
+    }
+    &:hover:before {
+        width: 100%; /* Expand the width of the line on hover */
     }
 
     &.active {
       border-bottom: 2px solid ${({ theme }) => theme.primary};
     }
 `;
-
-
 export const GitHubButton = styled.a`
   border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
@@ -80,22 +90,27 @@ export const GitHubButton = styled.a`
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.primary}; /* Set initial text color to primary */
+  color: ${({ theme }) => theme.white}; /* Set initial background color to white */
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
   text-decoration: none;
   font-size: 16px;
-  transition: all 0.6s ease-in-out;
-    :hover {
-      background: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.white};     
-    }
-    @media screen and (max-width: 768px) { 
-    font-size: 14px;
-    }
-`;
+  transition: all 0.2s ease-in-out;
 
+  /* Hover effect */
+  :hover {
+    border: 1.8px solid ${({ theme }) => theme.primary};
+    background: transparent; /* Make background transparent on hover */
+    color: ${({ theme }) => theme.primary}; /* Change text color to primary on hover */
+  }
+
+  /* Responsive font size */
+  @media screen and (max-width: 768px) { 
+    font-size: 14px;
+  }
+`;
 export const ButtonContainer = styled.div`
   width: 80%;  
   height: 100%;
@@ -107,8 +122,6 @@ export const ButtonContainer = styled.div`
     display: none;
   }
 `;
-
-
 export const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
@@ -122,7 +135,6 @@ export const MobileIcon = styled.div`
     color: ${({ theme }) => theme.text_primary};
   }
 `
-
 export const MobileMenu = styled.div`
     display: flex;
     flex-direction: column;
@@ -140,9 +152,7 @@ export const MobileMenu = styled.div`
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
-
 `
-
 export const MobileMenuItems = styled.ul`
   display: flex;
   flex-direction: column;
@@ -153,7 +163,6 @@ export const MobileMenuItems = styled.ul`
   width: 100%;
   height: 100%;
 `
-
 export const MobileMenuLink = styled(LinkR)`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
@@ -168,7 +177,6 @@ export const MobileMenuLink = styled(LinkR)`
     border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 `;
-
 export const MobileMenuButton = styled.a`
   border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
@@ -189,7 +197,6 @@ export const MobileMenuButton = styled.a`
     color: ${({ theme }) => theme.white};
   }
 `;
-
 export  const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
@@ -204,7 +211,6 @@ export  const MobileLink = styled.a`
     border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 `;
-
 export const MobileNavLogo = styled(LinkR)`
   width: 80%;
   padding: 0 6px;

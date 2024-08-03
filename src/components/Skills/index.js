@@ -29,7 +29,7 @@ export const Title = styled.div`
 font-size: 42px;
 text-align: center;
 font-weight: 600;
-margin-top: 20px;
+margin-top: 65px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
 margin-top: 12px;
@@ -45,6 +45,12 @@ export const Desc = styled.div`
     @media (max-width: 768px) {
         font-size: 16px;
     }
+    @media (max-width: 640px) {
+      margin-top: 12px;
+      margin-right: 25px;
+      margin-left: 25px;
+      font-size: 16px;
+  }
 `;
 
 const SkillsContainer = styled.div`
@@ -124,7 +130,7 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>Here are some of my skills on which I have been working on for the past 2 years.
+        <Desc>Here are some of my skills and tech stacks on which I have been working on and still studying for the past 4 years of my journey as an IT student.
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (

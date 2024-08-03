@@ -1,6 +1,5 @@
-
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -17,7 +16,7 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 40px 0px 80px 0px;
+    padding: 40px 0px 55px 0px;
     @media (max-width: 960px) {
         padding: 0px;
     }
@@ -39,15 +38,18 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
-  }
+    font-size: 42px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    color: ${({ theme }) => theme.text_primary};
+    @media (max-width: 768px) {
+        margin-top: 12px;
+        font-size: 32px;
+    }
+    @media (max-width: 640px) {
+        margin-top: 25px;
+    }
 `;
 
 const Desc = styled.div`
@@ -72,20 +74,24 @@ const TimelineSection = styled.div`
     gap: 12px;
 `;
 
-
+const CustomTimelineItem = styled(TimelineItem)`
+    display: flex;
+    flex-direction: ${({ index }) => index % 2 === 0 ? 'row' : 'row-reverse'};
+    width: 100%;
+`;
 
 const index = () => {
     return (
         <Container id="experience">
             <Wrapper>
-                <Title>Experience</Title>
+                <Title>Awards & Certifications</Title>
                 <Desc>
-                    My work experience as a software engineer and working on different companies and projects.
+                    Some of my awards from my school and online certifications.
                 </Desc>
                 <TimelineSection>
                     <Timeline>
-                        {experiences.map((experience,index) => (
-                            <TimelineItem>
+                        {experiences.map((experience, index) => (
+                            <CustomTimelineItem key={index} index={index}>
                                 <TimelineSeparator>
                                     <TimelineDot variant="outlined" color="secondary" />
                                     {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
@@ -93,14 +99,13 @@ const index = () => {
                                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                                     <ExperienceCard experience={experience}/>
                                 </TimelineContent>
-                            </TimelineItem>
+                            </CustomTimelineItem>
                         ))}
                     </Timeline>
-
                 </TimelineSection>
             </Wrapper>
         </Container>
-    )
-}
+    );
+};
 
-export default index
+export default index;
